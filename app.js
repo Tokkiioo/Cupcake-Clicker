@@ -2,27 +2,19 @@
 let count = 0;
 // select value and buttons
 const value = document.querySelector("#value");
-const btns = document.querySelectorAll(".btn");
+const cupcake = document.querySelectorAll(".cupcake");
 
-btns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
+cupcake.forEach(function (cupcake) {
+    cupcake.addEventListener("click", function (e) {
         const styles = e.currentTarget.classList;
-        if (styles.contains("decrease")) {
-            count--;
-        } else if (styles.contains("increase")) {
+        if (styles.contains("cupcake")) {
             count++;
         } else {
             count = 0;
         }
 
         if (count > 0) {
-            value.style.color = "green";
-        }
-        if (count < 0) {
-            value.style.color = "red";
-        }
-        if (count === 0) {
-            value.style.color = "#222";
+            value.style.color = "limegreen";
         }
         value.textContent = count;
     });
